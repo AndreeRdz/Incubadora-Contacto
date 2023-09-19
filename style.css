@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,input,textarea{
+    font-family: sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: url(img/gente-que-hace-flores-papel-arte-artesania-trabajo-artesanal.jpg);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 100%;
+    max-width: 50rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgb(5, 5, 5);
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info{
+    background-color: white;
+}
+
+.contact-form{
+    background-color: rgb(24, 75, 184);
+}
+
+form{
+    padding: 2.3rem 2.2rem;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+}
+
+.title{
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+
+.input-container{
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input{
+    width: 100%;
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+textarea.input{
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 10px;
+    resize: none;
+    overflow-y: auto;
+}
+
+::placeholder{
+    color: rgb(104, 145, 233);
+    font-style: italic;
+}
+/* .input-container label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: rgb(174, 201, 187);
+    font: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+} */
+
+.input-container.textarea label{
+    top: 1rem;
+    transform: translateY(0);
+}
+
+.btn{
+    padding: 0.6rem 1.3rem;
+    background-color: orange;
+    border: 2px solid orange;
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: white;
+    
+}
+/* como podemos ayudarte? */
+.contact-info{
+    padding: 2.3rem 2.2rem;
+    position: relative;
+}
+.contact-info .title{
+    color:rgb(24, 75, 184);
+    font-weight: bold;
+}
+
+.text{
+    color: rgb(24, 75, 184);
+    margin: 1.5rem 0 2rem 0;
+    margin-bottom: 50px;
+}
+
+.information{
+    display: flex;
+    color: rgb(24, 75, 184);
+    margin: 15px 0;
+    align-items: center;
+    font-size: 20px;
+}
+
+.fa-solid{
+    font-size: 28px;
+    width: 28px;
+    margin-right: 0.7rem;
+}
+
+.social-media{
+    padding: 2rem 0 0 0;
+}
+
+
+ /* nuestras redes sociales */
+.social-media p{
+    margin-top: 50px;
+    color: rgb(24, 75, 184);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.social-icon{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon a{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: orange;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: .3s;
+}
+
+.social-icon a:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+/* RESPONSIVE STYLE */
+@media (max-width: 850px){
+    .form{
+        grid-template-columns: 1fr;
+    }
+    .contact-info:before{
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+    }
+    .contact-form:before{
+        top: -13px;
+        left: initial;
+        right: 70px;
+    }
+    .square{
+        transform: translate(140%, 43%);
+        height: 350px;
+    }
+    .text{
+        margin: 1rem 0 1.5rem 0;
+    }
+    .social-media{
+        padding: 1.5rem 0 0 0;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        padding: 1.5rem;
+    }
+    .contact-info:before{
+        display: none;
+    }
+    form,
+    .contact-info{
+        padding: 1.7rem 1.6rem;
+    }
+
+    .text, .information, .social-media p{
+        font-size: 0.8rem;
+    }
+
+    .title{
+        font-size: 1.1rem;
+    }
+
+    .social-icon{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .icon{
+        width: 23px;
+    }
+
+    .input{
+        padding: 0.45rem 1.2rem;
+    }
+
+    .btn{
+        padding: 0.45rem 1.2rem;
+    }
+}
